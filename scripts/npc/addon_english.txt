@@ -1,0 +1,13 @@
+"lang"
+{
+	"Language"      "English"
+	"Tokens"
+	{
+        "DOTA_Tooltip_Ability_annie_disintegrate"  "Disintegrate"  
+        "DOTA_Tooltip_Ability_datadriven_skeleton_Description"  "Hurls a fireball at an ennemy unit, dealing damage and halving the cooldown if it kills."
+        "DOTA_Tooltip_Ability_datadriven_skeleton_Lore" "And then, there was Documentation."
+        "DOTA_Tooltip_Ability_datadriven_skeleton_value"    "SOME:" 
+        "DOTA_Tooltip_Ability_datadriven_skeleton_another_value"    "DATA:" 
+        
+    }
+}

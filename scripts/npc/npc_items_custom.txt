@@ -1,0 +1,138 @@
+"DOTAAbilities"
+{
+    "item_poop" {
+        "BaseClass"             "item_datadriven"
+        "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"  "DOTA_UNIT_TARGET_TEAM_BOTH"
+        "AbilityUnitTargetType"  "DOTA_UNIT_TARGET_HERO"
+        "AbilityTextureName"     "Pyromania"
+        
+        "ID" "1110"
+        "ItemCost" "322"
+        "ItemKillable" "0" 
+        "ItemSellable" "0"
+        "ItemPurchasable" "0"
+        "ItemDroppable" "0"
+        "ItemStackable" "0"
+
+        "Model"        "models/props_gameplay/recipe.vmdl" 
+        "Effect"       "particles/generic_gameplay/dropped_item.vpcf"
+        "ItemQuality"  "consumable"
+
+        "ItemShareability" "ITEM_FULLY_SHAREABLE"
+
+        "SideShop"     "0" 
+        "SecretShop"   "0"
+        
+        "ItemInitialCharges"			"1"
+        "ItemPermanent" "0"
+        
+        "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_ALWAYS"
+        
+        "AbilityUnitDamageType"  "DAMAGE_TYPE_PHYSICAL"
+        "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityDamage"           "10 20 30 40"
+        "LevelsBetweenUpgrades"  "1"
+        "MaxLevel"               "4"
+        
+        "AbilityCastRange"        "325"
+        
+        "precache"
+        {
+            "particle"          "particles/econ/events/coal/coal_projectile.vpcf"
+            "model" "models/buildings/building_plain_reference.vmdl"
+        }
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type" "FIELD_INTEGER"
+                "radius" "40"
+            }
+            "02"
+            {
+                "var_type" "FIELD_INTEGER"
+                "slow" "-4 -6 -8 -10"
+            }
+            "03"
+            {
+                "var_type" "FIELD_INTEGER"
+                "slow_duration" "2"
+            }
+            "04"
+            {
+                "var_type" "FIELD_INTEGER"
+                "time_poop_activate" "2"
+            }
+            "05"
+            {
+                "var_type" "FIELD_INTEGER"
+                "poop_damage" "10 20 30 40"
+            }
+        }
+        
+        
+        "OnSpellStart"
+		{
+            "TrackingProjectile"
+            {
+                "Target" "TARGET"
+                "EffectName" "particles/econ/events/coal/coal_projectile.vpcf"
+                "Dodgeable" "1"
+                "ProvidesVision" "1"
+                "VisionRadius" "300"
+                "MoveSpeed" "1200"
+                "SourceAttachment" "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+            }
+        }
+        "OnProjectileHitUnit"
+        {
+            "RunScript"
+            {
+                "ScriptFile" "bunnyAbilities.lua"
+                "Function" "bunny_poopTouch"
+            }
+    		"SpendCharge"
+			{}
+        }
+        "OnProjectileDodge"
+        {
+            "RunScript"
+            {
+                "ScriptFile" "bunnyAbilities.lua"
+                "Function" "bunny_spawnPoop"
+            }
+            "SpendCharge"
+			{}
+        }
+        "Modifiers"
+        {
+            "item_poop_modifier"
+            {
+                "Passive" "1"  
+                "IsHidden" "0"  
+                "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%slow"
+                }
+            }
+            "modifier_poop_slow"
+            {
+                "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+                "IsBuff" "0"
+                "IsHidden" "0"
+                "Passive" "0"
+                "Duration" "%slow_duration"
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%slow"
+                }
+                "States"
+                {
+                    "MODIFIER_STATE_MUTED" "MODIFIER_STATE_VALUE_ENABLED"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,181 @@
+"DOTAHeroes"
+{
+	"npc_dota_hero_annie"
+	{
+		"override_hero"			"npc_dota_hero_lina"
+        "Model"					"models/heroes/lina/lina.mdl" // "models/annie_2012.vmdl" //
+        "Portrait"		        ""
+        "IdleExpression"	    ""
+        "ParticleFile"			""
+        "RenderablePortrait"
+		{
+        }
+   		"ItemSlots"
+		{
+        }
+		"SoundSet"				"0"	
+		"AbilityLayout" 		"4"
+		"Ability1"				"annie_disintegrate" 
+		"Ability2"				"annie_incinerate" 
+		"Ability3"				"annie_molten_shield" 
+		"Ability4"				"annie_summon_tibbers"
+		"Ability5"				"annie_pyromania" // this is hidden // very hard coded (only works ith annie's abilities)
+		"Ability6"				""
+        "Ability7"				""
+        "Ability8"				""
+        "Ability9"				""
+        "Ability10"				""
+        "Ability11"				""
+        "Ability12"				""
+        "Ability13"				""
+        "Ability14"				""
+        "Ability15"				""
+        "Ability16"				""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"			"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"48"										// Damage range min.
+		"AttackDamageMax"			"52"										// Damage range max.
+        "AttackRange"		    	"458" // 625 in LoL
+        
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"3.7"								    
+		"AttributeBaseIntelligence"	"0"								    // Base intelligence
+		"AttributeIntelligenceGain"	"3.8"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		//"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"335"									// Speed.
+		"MovementTurnRate"			"1.0"									// Turning rate.
+
+		"StatusHealth"				"512"									// Base health.
+		"StatusHealthRegen"			"1.08"									// Health regeneration rate.
+		"StatusMana"				"334"										// Base mana.
+		"StatusManaRegen"			"1.2"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+    
+    "npc_dota_hero_bunny"
+	{
+		"override_hero"			"npc_dota_hero_kunkka"
+        "Model"					"models/items/courier/arneyb_rabbit/arneyb_rabbit.vmdl"
+        "Portrait"		        ""
+        "IdleExpression"	    ""
+        "ParticleFile"			""
+        "RenderablePortrait"
+		{
+        }
+   		"ItemSlots"
+		{
+        }
+		"SoundSet"				"0"	
+		"AbilityLayout" 		"4"
+		"Ability1"				"bunny_digestion" 
+		"Ability2"				"bunny_dig" 
+		"Ability3"				"bunny_jump" 
+		"Ability4"				"bunny_summon_easter_eggs"
+		"Ability5"				""
+		"Ability6"				""
+        "Ability7"				""
+        "Ability8"				""
+        "Ability9"				""
+        "Ability10"				""
+        "Ability11"				""
+        "Ability12"				""
+        "Ability13"				""
+        "Ability14"				""
+        "Ability15"				""
+        "Ability16"				""
+
+		"ArmorPhysical"				"2"									// Physical protection.
+		"MagicalResistance"			"25"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"32"										// Damage range min.
+		"AttackDamageMax"			"40"										// Damage range max.
+        "AttackRange"		    	"128"
+        
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"16"										// Base strength
+		"AttributeStrengthGain"		"1.8"								    
+		"AttributeBaseIntelligence"	"13"								    // Base intelligence
+		"AttributeIntelligenceGain"	"1.5"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"20"										// Base agility
+		"AttributeAgilityGain"		"2.5"										// Agility bonus per level.
+
+		//"BountyXP"					"0"									// Experience earn.
+		//"BountyGoldMin"				"0"										// Gold earned min.
+		//"BountyGoldMax"				"0"										// Gold earned max.
+
+		//"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"285"									// Speed.
+		"MovementTurnRate"			"0.6"									// Turning rate.
+
+		"StatusHealth"				"150"									// Base health.
+		"StatusHealthRegen"			"1.25"									// Health regeneration rate.
+		"StatusMana"				"0"										// Base mana.
+		"StatusManaRegen"			"0.01"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+    
+    "npc_dota_hero_windrunner_holdout"
+	{
+		"override_hero"	"npc_dota_hero_windrunner"
+		
+		"AttackRate"	"1.7" // Speed of attack.
+		"AttackRange"	"580" // Range within a target can be attacked.
+		"ProjectileSpeed" "1050" // Speed of projectile.
+
+		"AttackDamageMin"			"13"										// Damage range min.
+		"AttackDamageMax"			"41"										// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+
+		"Ability4"	 "lady_luck_gate_of_babylon"		
+		"Ability3"	 "lady_luck_dice_attack"		
+		"Ability2"	 "lady_luck_blackjack"		
+		"Ability1"	 "lady_luck_tarot_card"
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"								// Speed.
+		"MovementTurnRate"			"0.35"	
+
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"				"131"									// Base health.
+		"StatusHealthRegen"			"0.33"									// Health regeneration rate.
+		"StatusMana"				"42"										// Base mana.
+		"StatusManaRegen"			"0.042"
+
+		// Attributes
+		//---------------------------------
+		"AttributePrimary" "DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength" "19" // Base strength
+		"AttributeStrengthGain" "1.8"	 // Strength bonus per level.
+
+		"AttributeBaseAgility" "16" // Base agility
+		"AttributeAgilityGain" "1.2" // Agility bonus per level.
+
+		"AttributeBaseIntelligence" "22" // Base intelligence
+		"AttributeIntelligenceGain" "2.7" // Intelligence bonus per level.
+
+		
+	}
+}
